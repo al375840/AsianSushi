@@ -12,8 +12,13 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/libre-barcode-39-text": "^5.0.19",
+    "@fontsource/swanky-and-moo-moo": "^5.0.12",
+    "@midudev/tailwind-animations": "^0.0.7",
     "astro": "^3.3.4",
     "gh-pages": "^6.0.0",
-    "sass": "^1.69.4"
+    "sass": "^1.69.4",
+    "tailwindcss": "^3.4.3"
   }
 }

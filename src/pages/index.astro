@@ -1,11 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import '@fontsource/swanky-and-moo-moo';
+import '@fontsource/libre-barcode-39-text';
 ---
-
+<video autoplay loop muted play-inline class="background-clip">
+	<source src="/src/pages/images/video.mp4" type="video/mp4">
+</video>
 <Layout title="Welcome to Astro.">
+
 	<main>
-		<svg
+		 <!-- <svg
 			class="astro-a"
 			width="495"
 			height="623"
@@ -32,18 +37,22 @@ import Card from '../components/Card.astro';
 					<stop offset="1" stop-opacity="0.2"></stop>
 				</linearGradient>
 			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Asian sushi</span></h1>
-		<ul role="list" class="link-card-grid">
-			<Card
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		</svg> -->
+		<div class="isolate aspect-video w-96 rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5 "></div>
+		<h1><span class="text-gradient">Asian sushi</span></h1>
+			<!-- <div class="isolate aspect-video w-96 rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5">
+				<a href="#">
+					<img class="rounded-t-lg" src="/src/pages/images/sushi.webp" alt="" />
+				</a>
+				<div class="p-5">
+					<a href="#">
+						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+					</a>
+					<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+				</div>
+			</div> -->
+		
+
 	</main>
 </Layout>
 
@@ -51,7 +60,7 @@ import Card from '../components/Card.astro';
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
+		width: 100%;
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
@@ -59,44 +68,34 @@ import Card from '../components/Card.astro';
 	}
 	.astro-a {
 		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
+		transform: translatex(-0%);
 		width: 220px;
 		height: auto;
 		z-index: -1;
 	}
 	h1 {
-		font-size: 4rem;
-		font-weight: 700;
+		font-family: 'Libre Barcode 39 Text', system-ui;
+		margin-top: 30%;
+		font-size: 15rem;
+		font-weight: 120;
 		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
+		margin-top: 30%;
+		text-align: left;
+	}
+	.div{
+		margin-top: 45%;
+		line-height: 1;
+		margin-top: 40%;
+		text-align: right;
+		width: 25%;
+		width: 50%;
 	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
+		background: linear-gradient(45deg, #d81726, #af191f);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
 	}
 	.link-card-grid {
 		display: grid;
@@ -104,4 +103,12 @@ import Card from '../components/Card.astro';
 		gap: 2rem;
 		padding: 0;
 	}
+	.background-clip{
+		position: absolute;
+		
+		width: 100%;
+		height: auto;
+		z-index: -2;
+	}
+
 </style>
